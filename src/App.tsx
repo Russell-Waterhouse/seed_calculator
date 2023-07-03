@@ -4,6 +4,10 @@ import './App.css';
 
 const App: React.FC = () => {
     const [inputValue, setInputValue] = useState('');
+    //TODO: 
+    //1. Create a seed component (row that shows what has been entered, allows editing)
+    //2. Create a mixture input component
+    //3. Create a mixture output component
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
          setInputValue(event.target.value);
