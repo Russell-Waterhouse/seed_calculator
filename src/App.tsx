@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { SubmitButton } from './components/SubmitButton' 
+
+
 
 const App: React.FC = () => {
     const [inputValue, setInputValue] = useState('');
@@ -29,11 +31,12 @@ const App: React.FC = () => {
                 placeholder="enter an algebraic expression"
                 />
                 <button type="submit">Calculate</button>
+                <br />
+                <SubmitButton onClick={handleSubmit} />
             </form>
         </div>
     </div>
-
   );
-
 };
+
 export default App;
