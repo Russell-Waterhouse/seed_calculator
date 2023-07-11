@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, MouseEventHandler } from 'react';
 import './App.css';
 import { SubmitButton } from './components/SubmitButton' 
 
@@ -15,15 +15,15 @@ const App: React.FC = () => {
          setInputValue(event.target.value);
     };
 
-    const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>) => {
-        event.preventDefault();
+    const handleSubmit: MouseEventHandler = (_) => {
+        console.log("I know you pressed the button");
         // TODO: perform calculation here with mathjs
     };
 
   return (
     <div className="App">
         <div>
-            <form onSubmit={handleSubmit}>
+            <form>
                 <input
                 type="text"
                 value="inputValue"
